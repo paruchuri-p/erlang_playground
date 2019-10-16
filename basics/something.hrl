@@ -1,0 +1,1 @@
+-record(random, {something="something"}).
