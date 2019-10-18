@@ -23,6 +23,7 @@ priority_messages() ->
       after 0 -> normal_messages()
     end.
 
+%% Low priority messages.
 normal_messages() ->
     receive
       {Message, _} -> [{Message, normal} | normal_messages()]
