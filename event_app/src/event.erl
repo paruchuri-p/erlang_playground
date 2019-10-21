@@ -44,7 +44,7 @@ normalize(N) ->
     Limit = 49 * 24 * 60 * 60,
     [N rem Limit | lists:duplicate(N div Limit, Limit)].
 
-%% The input is given in the dat time format. We convert it to seconds.
+%% The input is given in the date time format. We convert it to seconds.
 to_go(TimeOut = {{_, _, _}, {_, _, _}}) ->
     Now = calendar:local_time(),
     ToGo = calendar:datetime_to_gregorian_seconds(TimeOut) -
